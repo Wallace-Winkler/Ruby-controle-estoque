@@ -12,8 +12,10 @@ def cadastro_produtos(produtos)
   qtd = gets.to_i
   limpar_tela
 
-  produto = {id: Time.now.to_i ,nome: nome, description: description, quantidade: qtd}
+  produto = {id: produtos.length + 1 ,nome: nome, description: description, quantidade: qtd}
 
   produtos << produto
+
+  mensagem("produto cadastrado com sucesso", true, true, 3)
 
 end
